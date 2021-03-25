@@ -143,4 +143,5 @@ opinion, be improved on your services (which definitely rock btw!):
 - The latest ExternalDNS release doesn't work with the current Scaleway DNS
   API, and we therefore had to use the `master` branch (almost), based on the
   image built by the ExternalDNS CI for testing purpose (see
-  `k8s-addon-external-dns-values.yaml`)
+  `k8s-addon-external-dns-values.yaml` and
+  <https://console.cloud.google.com/gcr/images/k8s-staging-external-dns/GLOBAL/external-dns?gcrImageListsize=30>)
