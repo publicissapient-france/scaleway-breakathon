@@ -17,7 +17,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: hello-scaleway
+            name: hello-scaleway-clusterip
             port:
               number: 80
   tls:
