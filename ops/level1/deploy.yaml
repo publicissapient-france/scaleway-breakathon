@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hello-scaleway
+  name: hello-scaleway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-scaleway
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hello-scaleway
+    spec:
+      containers:
+      - image: rg.nl-ams.scw.cloud/breakathon-xebia4ever/ops/front
+        name: front
+      imagePullSecrets:
+      - name: registry-secret
+

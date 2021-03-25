@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    external-dns.alpha.kubernetes.io/hostname: smoke.breakathon.dev
+    external-dns.alpha.kubernetes.io/ttl: "60"
+spec:
+  rules:
+  - host: hello.ops.breakathon.dev
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: hello-scaleway
+            port:
+              number: 80
