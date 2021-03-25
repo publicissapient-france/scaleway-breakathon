@@ -8,6 +8,10 @@ terraform {
       source  = "hashicorp/kubernetes"
       version = "2.0.3"
     }
+    helm = {
+      source  = "hashicorp/helm"
+      version = "2.0.3"
+    }
   }
   required_version = ">= 0.13"
 }
@@ -20,6 +24,13 @@ provider "scaleway" {
 
 provider "kubernetes" {
   config_path = "/tmp/kubeconfig-xebia4ever-breakathon.yaml"
+}
+
+# TODO depend on cluster somehow
+provider "helm" {
+  kubernetes {
+    config_path = "/tmp/kubeconfig-xebia4ever-breakathon.yaml"
+  }
 }
 
 terraform {
