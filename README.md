@@ -133,3 +133,7 @@ opinion, be improved on your services (which definitely rock btw!):
 - We had trouble inviting people to the Scaleway org - some of them still
   cannot see its projects, but cannot be re-invited either because they
   "already belong to the organization"
+- The latest ExternalDNS release doesn't work with the current Scaleway DNS
+  API, and we therefore had to use the `master` branch (almost), based on the
+  image built by the ExternalDNS CI for testing purpose (see
+  `k8s-addon-external-dns-values.yaml`)
