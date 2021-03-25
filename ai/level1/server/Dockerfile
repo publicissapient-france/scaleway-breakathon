@@ -9,4 +9,4 @@ COPY model.pth model.pth
 ENV FLASK_APP "app.py"
 ENV FLASK_ENV "to complete"
 
-CMD ["flask", "run"]
+CMD ["flask", "run", "--host=0.0.0.0"]

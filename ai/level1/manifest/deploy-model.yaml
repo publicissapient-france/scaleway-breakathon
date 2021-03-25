@@ -20,6 +20,8 @@ spec:
       containers:
         - image: rg.nl-ams.scw.cloud/breakathon-xebia4ever/ai/digit-finder-model
           name: model
+          ports:
+            - containerPort: 5000
           env:
             - name: "FLASK_ENV"
               value: "production"

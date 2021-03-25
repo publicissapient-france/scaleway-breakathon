@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hello-ingress
+  name: digit-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
     external-dns.alpha.kubernetes.io/hostname: digit.ai.breakathon.dev
     external-dns.alpha.kubernetes.io/ttl: "60"
     kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/service-upstream: "true"
     certmanager.k8s.io/cluster-issuer: letsencrypt-prod
 spec:
   tls:
