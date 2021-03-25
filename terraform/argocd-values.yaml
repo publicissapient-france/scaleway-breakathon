@@ -44,3 +44,4 @@ server:
 configs:
   secret:
     createSecret: true
+    argocdServerAdminPasswordMtime: 2021-03-24T17:53:48CET
