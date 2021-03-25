@@ -89,8 +89,8 @@ init/plan/apply/whatever the Terraform code in this repo:
 ```
 export SCW_ACCESS_KEY=<your Scaleway API access key>
 export SCW_SECRET_KEY=<your Scaleway API secret key>
-AWS_ACCESS_KEY_ID=$SCW_ACCESS_KEY
-AWS_SECRET_ACCESS_KEY=$SCW_SECRET_KEY
+export AWS_ACCESS_KEY_ID=$SCW_ACCESS_KEY
+export AWS_SECRET_ACCESS_KEY=$SCW_SECRET_KEY
 ```
 
 ### DNS
