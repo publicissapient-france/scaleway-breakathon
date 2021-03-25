@@ -93,7 +93,15 @@ AWS_ACCESS_KEY_ID=$SCW_ACCESS_KEY
 AWS_SECRET_ACCESS_KEY=$SCW_SECRET_KEY
 ```
 
-## Scaleway services feedback
+### DNS
+
+It's currently not possible to register domain names through Scaleway 🙁
+
+So we went and registered the domain name `breakathon.dev` on Gandi!
+
+We then manually delegated it to Scaleway through the console.
+
+## Scaleway services and tools feedback
 
 If you're an organizer of the Breakathon, glad you are reading this 🙂
 
