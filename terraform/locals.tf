@@ -4,4 +4,6 @@ locals {
     created-by      = terraform
     breakathon-team = xebia4ever
   }
+
+  desc_purpose = "for the Scaleway Breakathon by the Xebia4Ever team"
 }
