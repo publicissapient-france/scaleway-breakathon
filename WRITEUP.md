@@ -8,6 +8,8 @@ Scaleway!
 First, feel free to have a look at the README of this repository - you'll find
 a lot of interesting stuff in it, including feedback on Scaleway products.
 
+You'll also find a few images on <https://imgur.com/a/ORGiWEN>
+
 ## Let's say hello first
 
 You'll find a nice "smoke test" app deployed on every cluster in order to make
@@ -21,7 +23,9 @@ sure they work, and to say hello to you in a nice, Scaleway-themed way 🙂
 
 While we're teasing with links, have a look at
 **<https://argocd.software.breakathon.dev>** (ask for credentials on our
-Discord channel!)
+Discord channel!) and **<https://2048.fun.breakathon.dev>** 🎉
+
+![Hello Scaleway](https://i.imgur.com/OXIeleL.png)
 
 ## Using Scaleway services - not only Kapsule!
 
@@ -35,6 +39,8 @@ During this Breakathon, we used:
 - **Scaleway Load Balancers** - to expose our apps through LoadBalancer
   Services or though Ingresss
 - **Scaleway Object Storage** - to store our Terraform state
+
+![Scaleway domains](https://i.imgur.com/BHAZz8w.png)
 
 We also heavily used tooling provided by Scaleway here and there - the `scw`
 CLI, the `scaleway` Terraform provider, the `scaleway` External DNS provider
@@ -53,6 +59,8 @@ the digit predicted by the onboarded ML model. This model has been trained with
 (but don't worry, the submissions we did for the test dataset was trained on
 Scaleway's dataset 😇).
 
+![Digits app](https://i.imgur.com/Wr21Vdm.png)
+
 In short, we have:
 
 - A front-end in **JS + React** : <https://digit.ai.breakathon.dev/>
@@ -63,6 +71,7 @@ In short, we have:
 
 You can simply play with the webui and drag'n'drop your digits to see it the
 model identifies them correctly 🙂
+
 
 ## Infrastructure - Not just clusters
 
@@ -93,6 +102,9 @@ In order to answer all these tricky questions:
   have GPG-encrypted secrets so we can still have all the infrastructure inside
   git while not leaking anything!
 
+
+![ArgoCD overall view](https://i.imgur.com/BRkCQ8K.png)
+
 ## Deployment - Not a topic anymore
 
 We're in 2021, we have Kubernets clusters, Kustomize, Helm, etc. Deploying
@@ -102,3 +114,5 @@ already were packaged for Kubernetes and were just a matter of tuning values.
 
 Of course, this was easily possible thanks to all the work done previously on
 the clusters!
+
+![ArgoCD app](https://i.imgur.com/uwHUsCp.png)
