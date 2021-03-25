@@ -23,13 +23,13 @@ provider "scaleway" {
 }
 
 provider "kubernetes" {
-  config_path = "/tmp/kubeconfig-xebia4ever-breakathon.yaml"
+  config_path = "~/.kube/kubeconfig-xebia4ever-breakathon.yaml"
 }
 
 # TODO depend on cluster somehow
 provider "helm" {
   kubernetes {
-    config_path = "/tmp/kubeconfig-xebia4ever-breakathon.yaml"
+    config_path = "~/.kube/kubeconfig-xebia4ever-breakathon.yaml"
   }
 }
 
