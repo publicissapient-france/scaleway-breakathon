@@ -18,3 +18,10 @@ spec:
                 name: digit-finder
                 port:
                   number: 80
+          - path: /predict
+            pathType: Prefix
+            backend:
+              service:
+                name: digit-finder-model
+                port:
+                  number: 5000

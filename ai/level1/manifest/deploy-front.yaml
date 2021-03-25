@@ -20,9 +20,6 @@ spec:
       containers:
       - image: rg.nl-ams.scw.cloud/breakathon-xebia4ever/ai/digit-finder
         name: front
-        env:
-        - name: "REACT_APP_API_URL"
-          value: "digit-finder-model"
       imagePullSecrets:
       - name: registry-secret
 

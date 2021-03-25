@@ -8,4 +8,3 @@ RUN npm run build
 
 FROM nginx:1.19.8-alpine
 COPY --from=builder /app/build/ /usr/share/nginx/html/
-ENV REACT_APP_API_URL "to complete"
