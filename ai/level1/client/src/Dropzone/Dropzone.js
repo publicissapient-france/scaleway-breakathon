@@ -5,6 +5,7 @@ import './Dropzone.css';
 
 function Dropzone({onResult}) {
 
+  console.log(process.env);
   const onDrop = useCallback(acceptedFiles => {
     const formData = new FormData();
     formData.append('file', acceptedFiles[0])
