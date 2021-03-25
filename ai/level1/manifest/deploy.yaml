@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: digit-finder
+  name: digit-finder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: digit-finder
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: digit-finder
+    spec:
+      containers:
+      - image: rg.nl-ams.scw.cloud/breakathon-xebia4ever/ia/digit-finder
+        name: front
+      imagePullSecrets:
+      - name: registry-secret
+
