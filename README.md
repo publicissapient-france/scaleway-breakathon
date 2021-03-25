@@ -39,15 +39,22 @@ expected from the breakathon rules that we may have to share credentials, and
 didn't want to share our personal Scaleway accounts credentials with other team
 members 😉
 
-We are working in the `Xebia4Ever-Breakathon-2021` project/namespace (ID
-`80700332-ae36-4276-bbfe-a24b85d2aa19`).
+We are working in the `Breakathon` project/namespace as asked by the team
+registration process (ID
+`7ee16446-7711-4171-a7c2-4bb6f0d4c4c8`).
+
+## Scaleway region
+
+As required by the team registration cluster setup process, we are using the
+**Netherlands (Anmsterdam) aka `nl-ams` region**.
 
 ## Stack
 
 As every cloud users should, we aim at having everything automated.
 
 Therefore, all of the infrastructure deployment for this breakathon is done
-"as-code" in order to be reviewable, versionable, shareable, repeatable, etc.
+"as-code" as much as possible in order to be reviewable, versionable,
+shareable, repeatable, etc.
 
 For the main infrastructure-as-code part, we are using **Terraform**.
 
@@ -68,8 +75,8 @@ Object Storage bucket cannot be created with Terraform while having the
 Terraform state stored inside it.
 
 Therefore, the Terraform state is stored in a manually created private bucket
-called `xebia4ever-breakathon-tfstate` with the following endpoint:
-<https://xebia4ever-breakathon-tfstate.s3.fr-par.scw.cloud>
+called `breakathon-xebia4ever-tfstate` with the following endpoint:
+<https://breakathon-xebia4ever-tfstate.s3.nl-ams.scw.cloud>
 
 This is the only non-automated thing we'll allow ourselve to do during this
 Breakathon!
