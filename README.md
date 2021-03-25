@@ -128,3 +128,5 @@ opinion, be improved on your services (which definitely rock btw!):
   promising, but we didn't find any documentation about it so we ended up not
   configuring it due to the time constraint. We would have loved plugging
   Kubernetes auth on Auth0 directly!
+- It's not possible to tag a Container Registry, while other Scaleway resources
+  mostly support tags everywhere
