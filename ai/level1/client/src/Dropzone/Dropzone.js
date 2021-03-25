@@ -8,7 +8,7 @@ function Dropzone({onResult}) {
   const onDrop = useCallback(acceptedFiles => {
     const formData = new FormData();
     formData.append('file', acceptedFiles[0])
-    fetch(`${process.env.NODE_ENV === 'production' ? process.env.REACT_APP_API_URL : ''}/predict`, {method: 'POST', body: formData})
+    fetch(`${process.env.NODE_ENV === 'development' ?  '' : process.env.REACT_APP_API_URL}/predict`, {method: 'POST', body: formData})
     .then(response => response.json())
     .then(onResult);
   }, [onResult])
