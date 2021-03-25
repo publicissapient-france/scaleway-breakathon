@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: digit-finder
-  name: digit-finder
+    app: digit-finder-model
+  name: digit-finder-model
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: digit-finder
+      app: digit-finder-model
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: digit-finder
+        app: digit-finder-model
     spec:
       containers:
-      - image: rg.nl-ams.scw.cloud/breakathon-xebia4ever/ia/digit-finder
-        name: front
+        - image: rg.nl-ams.scw.cloud/breakathon-xebia4ever/ia/digit-finder-model
+          name: model
       imagePullSecrets:
-      - name: registry-secret
+        - name: registry-secret
 
