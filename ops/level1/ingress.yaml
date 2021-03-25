@@ -20,3 +20,7 @@ spec:
             name: hello-scaleway
             port:
               number: 80
+  tls:
+    - hosts:
+        - hello.ops.breakathon.dev
+      secretName: hello-ops-tls
