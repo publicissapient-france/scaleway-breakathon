@@ -115,3 +115,12 @@ opinion, be improved on your services (which definitely rock btw!):
   `Be careful as no locking mechanism are yet supported. Using scaleway object
   storage as terraform backend is not suitable if you work in a team with a
   risk of simultaneous access to the same plan.`
+- We used the Terraform `scaleway` provider on personal projects in the past
+  (version `2.0.0-rc2`). We were surprise to see that 2 days before the
+  Breakathon, the `2.0.0` stable version was release... with a lof of dropped
+  features 🙁 Mainly, the ability to configure the Ingress controller through
+  Terraform, [dropped in a PR 3 days before the
+  Breakathon](https://github.com/scaleway/terraform-provider-scaleway/pull/798).
+  We therefore do it "manually" with `scw k8s cluster update <cluster ID>
+  ingress=nginx` instead, which feels a bit awkward (but at least, it's done
+  through the Scaleway CLI and not some wonky curl or manually in the console!)
