@@ -19,8 +19,8 @@ function Dropzone({onResult}) {
       <input {...getInputProps()} />
       {
         isDragActive ?
-          <p>Drop the files here ...</p> :
-          <p>Drag 'n' drop the zip file!</p>
+          <p>Drop the file here ...</p> :
+          <p>Drag 'n' drop the image file!</p>
       }
     </div>
   )
