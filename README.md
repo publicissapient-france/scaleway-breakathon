@@ -124,3 +124,7 @@ opinion, be improved on your services (which definitely rock btw!):
   We therefore do it "manually" with `scw k8s cluster update <cluster ID>
   ingress=nginx` instead, which feels a bit awkward (but at least, it's done
   through the Scaleway CLI and not some wonky curl or manually in the console!)
+- The OpenID Connect configuration in the Terraform provider looks really
+  promising, but we didn't find any documentation about it so we ended up not
+  configuring it due to the time constraint. We would have loved plugging
+  Kubernetes auth on Auth0 directly!
