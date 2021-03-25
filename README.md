@@ -130,3 +130,6 @@ opinion, be improved on your services (which definitely rock btw!):
   Kubernetes auth on Auth0 directly!
 - It's not possible to tag a Container Registry, while other Scaleway resources
   mostly support tags everywhere
+- We had trouble inviting people to the Scaleway org - some of them still
+  cannot see its projects, but cannot be re-invited either because they
+  "already belong to the organization"
