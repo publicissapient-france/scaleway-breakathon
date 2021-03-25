@@ -1,0 +1,9 @@
+.App {
+  height: calc(100% - 40px);
+  background: #23163f;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 40% 60%;
+  background: center url(https://s3.nl-ams.scw.cloud/break-bucket/static/img/background-breakathon.jpg); 
+  padding: 20px;
+}

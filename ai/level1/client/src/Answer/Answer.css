@@ -1,0 +1,24 @@
+.Answer {
+  width: 50%;
+  border-radius: 10px;
+  justify-self: center;
+  font-size: 200px;
+  color: white;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.Answer_number {
+  transition: top 0.1s;
+  top: -300px;
+  position: absolute;
+}
+
+.Answer_number_visible {
+  top: calc(50% - 120px);
+}
