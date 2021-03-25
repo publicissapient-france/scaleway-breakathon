@@ -1,0 +1,18 @@
+image:
+  registry: gcr.io
+  repository: k8s-staging-external-dns/external-dns
+  tag: v20210322-v0.7.6-113-g6ca57a58
+provider: scaleway
+policy: sync
+domainFilters:
+ - ${challenge_slug}.breakathon.dev
+resources:
+  requests:
+    cpu: 50m
+    memory: 50M
+txtOwnerId: ${txt_owner}
+txtPrefix: ${txt_owner}
+sources:
+  - ingress
+scaleway:
+  scwDefaultOrganizationId: 15e7d66d-2197-49fa-8ef1-c94f7cfd4124

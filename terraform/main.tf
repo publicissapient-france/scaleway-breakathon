@@ -12,33 +12,38 @@ terraform {
       source  = "hashicorp/helm"
       version = "2.0.3"
     }
+    sops = {
+      source  = "carlpett/sops"
+      version = "0.6.0"
+    }
   }
-  required_version = ">= 0.13"
+  required_version = ">= 0.14"
 }
 
 provider "scaleway" {
-  zone            = "fr-par-1"
-  region          = "fr-par"
-  project_id      = "80700332-ae36-4276-bbfe-a24b85d2aa19"
+  zone            = "nl-ams-1"
+  region          = "nl-ams"
+  project_id      = "7ee16446-7711-4171-a7c2-4bb6f0d4c4c8"
 }
 
 provider "kubernetes" {
-  config_path = "~/.kube/kubeconfig-xebia4ever-breakathon.yaml"
+  alias = "kapsule_software"
+  config_path = "~/.kube/kubeconfig-kbreak-software-xebia4ever.yaml"
 }
 
-# TODO depend on cluster somehow
 provider "helm" {
+  alias = "kapsule_software"
   kubernetes {
-    config_path = "~/.kube/kubeconfig-xebia4ever-breakathon.yaml"
+    config_path = "~/.kube/kubeconfig-kbreak-software-xebia4ever.yaml"
   }
 }
 
 terraform {
   backend "s3" {
-    bucket                      = "xebia4ever-breakathon-tfstate"
+    bucket                      = "breakathon-xebia4ever-tfstate"
     key                         = "main-breakathon.tfstate"
-    region                      = "fr-par"
-    endpoint                    = "https://s3.fr-par.scw.cloud"
+    region                      = "nl-ams"
+    endpoint                    = "https://s3.nl-ams.scw.cloud"
     # These skips are necessary because otherwise the backend checks for
     # **AWS** credentials and regions, not Scaleway ;)
     skip_credentials_validation = true
