@@ -6,4 +6,7 @@ RUN pip install -r requirements.txt
 COPY *.py ./
 COPY model.pth model.pth
 
-CMD ["python", "app.py"]
+ENV FLASK_APP "app.py"
+ENV FLASK_ENV "to complete"
+
+CMD ["flask", "run"]
