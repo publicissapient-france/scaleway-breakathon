@@ -1,6 +1,7 @@
 resource "scaleway_k8s_cluster" "xebia4ever-breakathon" {
   name    = "xebia4ever-breakathon"
   description = "Main Kubernetes cluster for the Scaleway Breakathon by the Xebia4Ever team"
+  tags = locals.common_tags
 
   version = "1.20.4"
   cni     = "cilium"
